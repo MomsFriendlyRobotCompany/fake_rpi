@@ -1,6 +1,17 @@
 Fake Raspberry Pi
 ====================
 
+.. image:: https://landscape.io/github/walchko/fake_rpi/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/walchko/fake_rpi/master
+   :alt: Code Health
+.. image:: https://img.shields.io/pypi/v/fake_rpi.svg
+    :target: https://pypi.python.org/pypi/fake_rpi/
+    :alt: Latest Version
+.. image:: https://img.shields.io/pypi/l/fake_rpi.svg
+    :target: https://pypi.python.org/pypi/fake_rpi/
+    :alt: License
+
+
 **Why??**
 
 I do a lot of development on my Powerbook and I got tired of constantly creating
@@ -34,6 +45,10 @@ To use as is:
 
 	from fake_rpi import GPIO as io
 	from fake_rpi import smbus
+	from fake_rpi import toggle_print
+
+	# by default it prints everything to std.error
+	toggle_print(False)  # turn on/off printing
 
 	io.setmode(io.BCM)
 	b = io.input(21)
@@ -41,7 +56,8 @@ To use as is:
 	sm = smbus.SMBus(1)
 	b = sm.read_byte_data(0x21, 0x32)  # read in a byte
 
-But I need ``smbus`` to return a specific byte for unit testing:
+But I need ``smbus`` to return a specific byte for unit testing! Ok, then create a child of my ``smbus`` like below
+and modify *only* the methods you need changed:
 
 .. code-block:: python
 
@@ -72,6 +88,7 @@ Change Log
 ------------
 
 ========== ====== =========
+2017-04-02 0.0.1  pushed to pypi
 2017-04-01 0.0.1  created
 ========== ====== =========
 
