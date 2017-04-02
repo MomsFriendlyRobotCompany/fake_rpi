@@ -5,7 +5,7 @@ from fake_rpi import smbus
 from fake_rpi import printf
 from fake_rpi import toggle_print
 
-toggle_print(False)  # turn on/off printing
+toggle_print(True)  # turn on/off printing
 
 pwm = RPi.PWM()
 pwm.start(5)

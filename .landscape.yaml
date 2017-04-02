@@ -7,7 +7,7 @@ pylint:
         - logging-too-many-args
         - too-many-function-args
         - unused-import
-        - pointless-string-statement
+        - unused-argument
 
 ignore-paths:
     - docs

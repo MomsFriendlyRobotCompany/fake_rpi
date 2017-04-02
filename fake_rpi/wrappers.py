@@ -4,7 +4,6 @@ from __future__ import print_function
 
 from functools import wraps
 
-global PRINT_ON
 PRINT_ON = True
 
 
@@ -28,7 +27,6 @@ def toggle_print(p):
 def printf(f):
 	@wraps(f)
 	def wrapped(*args, **kwargs):
-		global PRINT_ON
 		r = f(*args, **kwargs)
 		c = str(args[0].__class__).split('\'')
 		if PRINT_ON:
