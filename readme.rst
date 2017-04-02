@@ -1,0 +1,100 @@
+Fake Raspberry Pi
+====================
+
+**Why??**
+
+I do a lot of development on my Powerbook and I got tired of constantly creating
+a fake interface for dev on my laptop and testing on Travis.ci.
+
+2017 Apr 2: **Beta Quality**
+
+Install
+---------
+
+The preferred way to install this is::
+
+	pip install fake_rpi
+
+
+Development
+-------------
+
+To submit pull requests and do development::
+
+	git clone
+	cd fake_rpi
+	pip install -e .
+
+Usage
+-------
+
+To use as is:
+
+.. code-block:: python
+
+	from fake_rpi import GPIO as io
+	from fake_rpi import smbus
+
+	io.setmode(io.BCM)
+	b = io.input(21)
+
+	sm = smbus.SMBus(1)
+	b = sm.read_byte_data(0x21, 0x32)  # read in a byte
+
+But I need ``smbus`` to return a specific byte for unit testing:
+
+.. code-block:: python
+
+	from fake_rpi import smbus
+	from fake_rpi import printf
+
+	class MyBus(smbus.SMBus):
+		@printf
+		def read_byte_data(self, i2c_addr, register):
+			ret = 0xff
+			if i2c_addr == 0x21:
+				ret = 0x55
+			elif i2c_addr == 0x25:
+				ret = 0x11
+			return ret
+
+	sm = MyBus()
+	b = sm.read_byte_data(0x21, 0x32)  # read in a byte
+
+
+ToDo
+-------
+
+- add serial
+- double check interfaces and flush them out better
+
+Change Log
+------------
+
+========== ====== =========
+2017-04-01 0.0.1  created
+========== ====== =========
+
+License
+---------
+
+**The MIT License (MIT)**
+
+Copyright (c) 2017 Kevin J. Walchko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
