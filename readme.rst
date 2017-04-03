@@ -77,6 +77,31 @@ and modify *only* the methods you need changed:
 	sm = MyBus()
 	b = sm.read_byte_data(0x21, 0x32)  # read in a byte
 
+Printing On or Off
+~~~~~~~~~~~~~~~~~~~~~
+
+Here is the output from ``example.py`` in the ``git`` repo when the printing is
+toggled on or off:
+
+::
+
+	kevin@Logan fake_rpi $ ./example.py
+	<<< WARNING: using fake raspberry pi interfaces >>>
+
+::
+
+	kevin@Logan fake_rpi $ ./example.py
+	<<< WARNING: using fake raspberry pi interfaces >>>
+	fake_rpi.RPi.PWM.__init__()
+	fake_rpi.RPi.PWM.start(5,)
+	fake_rpi.smbus.SMBus.__init__(1,)
+	fake_rpi.smbus.SMBus.write_byte_data(1, 2, 3)
+	fake_rpi.smbus.SMBus.read_byte_data(1, 2): 21
+	fake_rpi.smbus.SMBus.close()
+	__main__.MyBus.__init__()
+	__main__.MyBus.read_byte_data(1, 2): 72
+	__main__.MyBus.read_i2c_block_data(1, 2, 3): [90, 90, 90]
+
 
 ToDo
 -------
@@ -88,7 +113,7 @@ Change Log
 ------------
 
 ========== ====== =========
-2017-04-02 0.0.1  pushed to pypi
+2017-04-02 0.0.2  pushed to pypi with landscape.io fixes
 2017-04-01 0.0.1  created
 ========== ====== =========
 
