@@ -1,11 +1,14 @@
+from __future__ import print_function
+from . import serial
+from . import smbus
+from . import RPi
+from .Adafruit import LSM303
+from .wrappers import printf
+from .wrappers import toggle_print
+
 __version__ = '0.0.2'
 __author__ = 'Kevin Walchko'
 __license__ = 'MIT'
 
-import serial
-import smbus
-import RPi
-from wrappers import printf
-from wrappers import toggle_print
 
-print '<<< WARNING: using fake raspberry pi interfaces >>>'
+print('<<< WARNING: using fake raspberry pi interfaces >>>')

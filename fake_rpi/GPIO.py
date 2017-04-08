@@ -1,4 +1,4 @@
-from wrappers import printf
+from .wrappers import printf
 from random import randint
 
 LOW = 0

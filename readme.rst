@@ -1,6 +1,8 @@
 Fake Raspberry Pi
 ====================
 
+.. image:: pics/pi-python.jpg
+
 .. image:: https://landscape.io/github/walchko/fake_rpi/master/landscape.svg?style=flat
    :target: https://landscape.io/github/walchko/fake_rpi/master
    :alt: Code Health
@@ -117,10 +119,8 @@ Change Log
 2017-04-01 0.0.1  created
 ========== ====== =========
 
-License
----------
-
-**The MIT License (MIT)**
+MIT License
+--------------------
 
 Copyright (c) 2017 Kevin J. Walchko
 
