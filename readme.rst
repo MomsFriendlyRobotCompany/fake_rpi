@@ -1,7 +1,7 @@
 Fake Raspberry Pi
 ====================
 
-.. image:: pics/pi-python.jpg
+.. image:: https://raw.githubusercontent.com/walchko/fake_rpi/master/pics/pi-python.jpg
 
 .. image:: https://landscape.io/github/walchko/fake_rpi/master/landscape.svg?style=flat
    :target: https://landscape.io/github/walchko/fake_rpi/master
