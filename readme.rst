@@ -120,6 +120,7 @@ Change Log
 ------------
 
 ========== ====== =========
+2017-04-08 0.0.5  initial python3 setup and support
 2017-04-02 0.0.2  pushed to pypi with landscape.io fixes
 2017-04-01 0.0.1  created
 ========== ====== =========
