@@ -12,6 +12,10 @@ Fake Raspberry Pi
 .. image:: https://img.shields.io/pypi/l/fake_rpi.svg
     :target: https://pypi.python.org/pypi/fake_rpi/
     :alt: License
+.. image:: https://travis-ci.org/walchko/fake_rpi.svg?branch=master
+    :target: https://travis-ci.org/walchko/fake_rpi
+.. image:: https://img.shields.io/pypi/pyversions/fake_rpi.svg
+	:target:  https://pypi.python.org/pypi/fake_rpi/
 
 
 **Why??**
@@ -20,6 +24,7 @@ I do a lot of development on my Powerbook and I got tired of constantly creating
 a fake interface for dev on my laptop and testing on Travis.ci.
 
 2017 Apr 2: **Beta Quality**
+2017 Apr 8: **Initial** python3 support
 
 Install
 ---------

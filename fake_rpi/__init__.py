@@ -6,7 +6,7 @@ from .Adafruit import LSM303
 from .wrappers import printf
 from .wrappers import toggle_print
 
-__version__ = '0.0.2'
+__version__ = '0.0.5'
 __author__ = 'Kevin Walchko'
 __license__ = 'MIT'
 
