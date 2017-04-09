@@ -19,9 +19,15 @@ class BuildCommand(TestCommand):
 		os.system('rm fake_rpi/*.pyc')
 		os.system('rm fake_rpi/__pycache__/*.pyc')
 		print('Run Nose tests')
-		ret = os.system("nosetests -v tests")
+		print('Python2 tests')
+		ret = os.system("python2 -m nose -v -w tests test.py")
 		if ret > 0:
-			print('<<< Nose tests failed >>>')
+			print('<<< Python2 nose tests failed >>>')
+			return
+		print('Python3 tests')
+		ret = os.system("python3 -m nose -v -w tests test.py")
+		if ret > 0:
+			print('<<< Python3 nose tests failed >>>')
 			return
 
 		print('Building packages ...')
