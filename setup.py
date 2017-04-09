@@ -28,7 +28,6 @@ class BuildCommand(TestCommand):
 		os.system("python setup.py sdist")
 		os.system("python2 setup.py bdist_wheel")
 		os.system("python3 setup.py bdist_wheel")
-		# os.system("twine upload dist/fake_rpi-{}*".format(VERSION))
 
 
 class PublishCommand(TestCommand):

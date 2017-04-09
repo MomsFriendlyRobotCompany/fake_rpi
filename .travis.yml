@@ -7,18 +7,9 @@ python:
   - "2.7"
   - "3.6"
 
-# command to install dependencies that require sudo
-# https://github.com/travis-ci/apt-package-whitelist/blob/master/ubuntu-precise
-# addons:
-#     apt:
-#         packages:
-#             - pyserial
-#             - nose
-
 # install other libraries using pip
 install:
     - pip install -U pip setuptools nose
-    # - pip install -U pyserial nose simplejson
 
 # command to run tests
 script: nosetests -v tests/test.py
