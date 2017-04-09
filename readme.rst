@@ -23,8 +23,8 @@ Fake Raspberry Pi
 I do a lot of development on my Powerbook and I got tired of constantly creating
 a fake interface for dev on my laptop and testing on Travis.ci.
 
-2017 Apr 2: **Beta Quality**
-2017 Apr 8: **Initial** python3 support
+- 2017 Apr 2: **Beta Quality**
+- 2017 Apr 8: **Initial** python3 support
 
 Install
 ---------

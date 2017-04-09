@@ -14,8 +14,10 @@ class BinaryDistribution(Distribution):
 class BuildCommand(TestCommand):
 	"""Build binaries/packages"""
 	def run_tests(self):
-		print('Delete dist directory')
+		print('Delete dist directory and clean up binary files')
 		os.system('rm -fr dist')
+		os.system('rm fake_rpi/*.pyc')
+		os.system('rm fake_rpi/__pychache__/*.pyc')
 		print('Run Nose tests')
 		ret = os.system("nosetests -v tests")
 		if ret > 0:
@@ -62,13 +64,5 @@ setup(
 	cmdclass={
 		'make': BuildCommand,
 		'publish': PublishCommand
-	},
-	# scripts=[
-	# 	'bin/set_id.py',
-	# 	'bin/servo_ping.py',
-	# 	'bin/set_angle.py',
-	# 	'bin/set_baud_rate.py',
-	# 	'bin/servo_reboot.py',
-	# 	'bin/servo_reset.py'
-	# ]
+	}
 )
