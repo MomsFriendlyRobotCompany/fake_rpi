@@ -17,7 +17,7 @@ class BuildCommand(TestCommand):
 		print('Delete dist directory and clean up binary files')
 		os.system('rm -fr dist')
 		os.system('rm fake_rpi/*.pyc')
-		os.system('rm fake_rpi/__pychache__/*.pyc')
+		os.system('rm fake_rpi/__pycache__/*.pyc')
 		print('Run Nose tests')
 		ret = os.system("nosetests -v tests")
 		if ret > 0:
