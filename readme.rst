@@ -24,7 +24,21 @@ I do a lot of development on my Powerbook and I got tired of constantly creating
 a fake interface for dev on my laptop and testing on Travis.ci.
 
 - 2017 Apr 2: **Beta Quality**
-- 2017 Apr 8: **Initial** python3 support
+- 2017 Apr 8: **Initial** python3 support ... this is a pain
+
+So, does this simulate everything on a Raspberry Pi? **No!** Right now it simulates
+what I use and need. Over time, more will be added. You are also welcome to
+submit pull requests for things I haven't added yet.
+
+============= =============================
+Adafruit      LSM303(accelerometer)
+GPIO          gpio pins
+picamera      camera
+RPi           PWM
+smbus         i2c
+serial        not done yet
+============= =============================
+
 
 Install
 ---------

@@ -1,56 +1,25 @@
 from __future__ import print_function
 from setuptools import setup
 from fake_rpi import __version__ as VERSION
-import os
-from setuptools.command.test import test as TestCommand
-from setuptools.dist import Distribution
+from build_utils import BuildCommand
+from build_utils import PublishCommand
+from build_utils import BinaryDistribution
 
 
-class BinaryDistribution(Distribution):
-	def is_pure(self):
-		return False
-
-
-class BuildCommand(TestCommand):
-	"""Build binaries/packages"""
-	def run_tests(self):
-		print('Delete dist directory and clean up binary files')
-		os.system('rm -fr dist')
-		os.system('rm fake_rpi/*.pyc')
-		os.system('rm fake_rpi/__pycache__/*.pyc')
-		print('Run Nose tests')
-		print('Python2 tests')
-		ret = os.system("python2 -m nose -v -w tests test.py")
-		if ret > 0:
-			print('<<< Python2 nose tests failed >>>')
-			return
-		print('Python3 tests')
-		ret = os.system("python3 -m nose -v -w tests test.py")
-		if ret > 0:
-			print('<<< Python3 nose tests failed >>>')
-			return
-
-		print('Building packages ...')
-		os.system("python setup.py sdist")
-		os.system("python2 setup.py bdist_wheel")
-		os.system("python3 setup.py bdist_wheel")
-
-
-class PublishCommand(TestCommand):
-	"""Publish to Pypi"""
-	def run_tests(self):
-		print('Publishing to PyPi ...')
-		os.system("twine upload dist/fake_rpi-{}*".format(VERSION))
+PACKAGE_NAME = 'fake_rpi'
+BuildCommand.pkg = PACKAGE_NAME
+PublishCommand.pkg = PACKAGE_NAME
+PublishCommand.version = VERSION
 
 
 setup(
 	author='Kevin Walchko',
 	author_email='kevin.walchko@outlook.com',
-	name='fake_rpi',
+	name=PACKAGE_NAME,
 	version=VERSION,
 	description='A bunch of fake interfaces for development when not using the RPi or unit testing',
 	long_description=open('readme.rst').read(),
-	url='http://github.com/walchko/fake_rpi',
+	url='http://github.com/walchko/{}'.format(PACKAGE_NAME),
 	classifiers=[
 		'Development Status :: 4 - Beta',
 		'Intended Audience :: Developers',
@@ -64,8 +33,8 @@ setup(
 	],
 	license='MIT',
 	keywords='raspberry pi fake i2c spi gpio serial',
-	packages=['fake_rpi'],
-	install_requires=[],
+	packages=[PACKAGE_NAME],
+	install_requires=['build_utils'],
 	cmdclass={
 		'make': BuildCommand,
 		'publish': PublishCommand

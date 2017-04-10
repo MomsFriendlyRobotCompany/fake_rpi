@@ -5,6 +5,7 @@ from . import RPi
 from .Adafruit import LSM303
 from .wrappers import printf
 from .wrappers import toggle_print
+from . import picamera
 
 __version__ = '0.1.0'
 __author__ = 'Kevin Walchko'
