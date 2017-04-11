@@ -32,7 +32,7 @@ setup(
 		'Topic :: Software Development :: Libraries :: Application Frameworks'
 	],
 	license='MIT',
-	keywords='raspberry pi fake i2c spi gpio serial',
+	keywords=['raspberry', 'pi', 'fake', 'fake_rpi', 'i2c', 'spi', 'gpio', 'serial'],
 	packages=[PACKAGE_NAME],
 	install_requires=['build_utils'],
 	cmdclass={
