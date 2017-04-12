@@ -1,7 +1,7 @@
+.. image:: https://raw.githubusercontent.com/walchko/fake_rpi/master/pics/pi-python.jpg
+
 Fake Raspberry Pi
 ====================
-
-.. image:: https://raw.githubusercontent.com/walchko/fake_rpi/master/pics/pi-python.jpg
 
 .. image:: https://landscape.io/github/walchko/fake_rpi/master/landscape.svg?style=flat
    :target: https://landscape.io/github/walchko/fake_rpi/master
@@ -14,8 +14,10 @@ Fake Raspberry Pi
     :alt: License
 .. image:: https://travis-ci.org/walchko/fake_rpi.svg?branch=master
     :target: https://travis-ci.org/walchko/fake_rpi
+    :alt: Travis-ci
 .. image:: https://img.shields.io/pypi/pyversions/fake_rpi.svg
 	:target:  https://pypi.python.org/pypi/fake_rpi/
+	:alt: Python Versions
 
 
 **Why??**

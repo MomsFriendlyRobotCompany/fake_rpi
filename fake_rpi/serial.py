@@ -13,14 +13,22 @@ class Serial(object):
 	in_waiting = True
 	out_waiting = False
 	ri = False
+	port = 'port'
+	baudrate = 0
+	timeout = 0
+	status = False  # open or closed
+	name = 'name'
 
-	def __init__(self, port):
+	def __init__(self):
 		pass
 
 	def open(self):
-		pass
+		self.status = True
 
-	def setRTS(self):
+	def isOpen(self):
+		return self.status
+
+	def setRTS(self, a):
 		pass
 
 	def read(self, size=1):
@@ -30,7 +38,7 @@ class Serial(object):
 		return len(data)
 
 	def close(self):
-		pass
+		self.status = False
 
 	def flush(self):
 		pass
@@ -46,3 +54,6 @@ class Serial(object):
 
 	def cancel_write(self):
 		pass
+
+	def get_settings(self):
+		return {'port': self.port}
