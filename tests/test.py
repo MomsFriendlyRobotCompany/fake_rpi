@@ -2,6 +2,7 @@ from __future__ import print_function
 from fake_rpi import smbus
 from fake_rpi import picamera
 from fake_rpi import RPi
+from fake_rpi import serial
 
 
 def test_smbus():
@@ -40,3 +41,10 @@ def test_picamera():
 	assert im.shape == im_shape
 	bgr.truncate(0)
 	assert True
+
+	def test_serial():
+		s = serial.Serial()
+		# try opening and it should fail
+		s.port  = '/dev/serial'
+		s.open()
+		assert s.isOpen() is True

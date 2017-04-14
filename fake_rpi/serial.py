@@ -13,7 +13,7 @@ class Serial(object):
 	in_waiting = True
 	out_waiting = False
 	ri = False
-	port = 'port'
+	port = None
 	baudrate = 0
 	timeout = 0
 	status = False  # open or closed
@@ -23,6 +23,8 @@ class Serial(object):
 		pass
 
 	def open(self):
+		if not self.port:
+			raise Exception('set Serial::port before opening')
 		self.status = True
 
 	def isOpen(self):
