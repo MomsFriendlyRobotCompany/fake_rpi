@@ -7,7 +7,7 @@ from .wrappers import printf
 from .wrappers import toggle_print
 from . import picamera
 
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 __author__ = 'Kevin Walchko'
 __license__ = 'MIT'
 
