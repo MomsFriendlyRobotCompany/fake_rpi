@@ -1,6 +1,6 @@
 from __future__ import print_function
 from setuptools import setup
-from fake_rpi import __version__ as VERSION
+from fake_rpi.version import __version__ as VERSION
 from build_utils import BuildCommand
 from build_utils import PublishCommand
 from build_utils import BinaryDistribution

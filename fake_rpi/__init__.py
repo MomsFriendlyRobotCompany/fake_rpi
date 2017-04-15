@@ -6,8 +6,8 @@ from .Adafruit import LSM303
 from .wrappers import printf
 from .wrappers import toggle_print
 from . import picamera
+from .version import __version__
 
-__version__ = '0.1.3'
 __author__ = 'Kevin Walchko'
 __license__ = 'MIT'
 
