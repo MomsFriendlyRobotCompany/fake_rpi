@@ -14,7 +14,7 @@ PublishCommand.version = VERSION
 
 setup(
 	author='Kevin Walchko',
-	author_email='kevin.walchko@outlook.com',
+	author_email='walchko@users.noreply.github.com',
 	name=PACKAGE_NAME,
 	version=VERSION,
 	description='A bunch of fake interfaces for development when not using the RPi or unit testing',
