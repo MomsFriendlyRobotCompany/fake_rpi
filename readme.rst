@@ -1,4 +1,4 @@
-.. image:: https://raw.githubusercontent.com/walchko/fake_rpi/master/pics/pi-python.jpg
+.. image:: https://raw.githubusercontent.com/MomsFriendlyRobotCompany/fake_rpi/master/pics/pi-python.jpg
 
 Fake Raspberry Pi
 ====================
@@ -12,8 +12,8 @@ Fake Raspberry Pi
 .. image:: https://img.shields.io/pypi/l/fake_rpi.svg
     :target: https://pypi.python.org/pypi/fake_rpi/
     :alt: License
-.. image:: https://travis-ci.org/walchko/fake_rpi.svg?branch=master
-    :target: https://travis-ci.org/walchko/fake_rpi
+.. image:: https://travis-ci.org/MomsFriendlyRobotCompany/fake_rpi.svg?branch=master
+    :target: https://travis-ci.org/MomsFriendlyRobotCompany/fake_rpi
     :alt: Travis-ci
 .. image:: https://img.shields.io/pypi/pyversions/fake_rpi.svg
 	:target:  https://pypi.python.org/pypi/fake_rpi/
