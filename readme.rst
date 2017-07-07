@@ -3,9 +3,6 @@
 Fake Raspberry Pi
 ====================
 
-.. image:: https://landscape.io/github/walchko/fake_rpi/master/landscape.svg?style=flat
-   :target: https://landscape.io/github/walchko/fake_rpi/master
-   :alt: Code Health
 .. image:: https://img.shields.io/pypi/v/fake_rpi.svg
     :target: https://pypi.python.org/pypi/fake_rpi/
     :alt: Latest Version
