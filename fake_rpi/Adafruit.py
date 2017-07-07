@@ -1,4 +1,5 @@
 import random
+from .Base import Base
 
 
 class HW(object):
@@ -6,12 +7,13 @@ class HW(object):
 		pass
 
 
-class LSM303(object):
+class LSM303(Base):
 	"""
 	Dummy interface for testing outside of linux/RPi where I don't have
 	access to I2C and the real sensor.
 	"""
 	def __init__(self, hires=True, accel_address=0, mag_address=0, i2c=None, **kwargs):
+		Base.__init__(self, self.__class__)
 		random.seed()  # init for random data
 		self._mag = HW()
 		self._accel = HW()
@@ -32,7 +34,8 @@ class LSM303(object):
 		return (accel, mag)
 
 
-class MCP230XX(object):  # mux
-	def __init__(self, a, b, c): pass
+class MCP230XX(Base):  # mux
+	def __init__(self, a, b, c):
+		super(Base, self).__init__()
 	def write8(self, a): pass  # print('mux wrote:', a)
 	def config(self, a, b): pass

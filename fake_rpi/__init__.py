@@ -6,11 +6,9 @@ from .Adafruit import LSM303
 from .wrappers import printf
 from .wrappers import toggle_print
 from . import picamera
-from . import PWM
+from .RPi import PWM
+from .RPi import GPIO
 from .version import __version__
 
 __author__ = 'Kevin Walchko'
 __license__ = 'MIT'
-
-
-print('<<< WARNING: using fake raspberry pi interfaces >>>')

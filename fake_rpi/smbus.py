@@ -1,12 +1,14 @@
 from .wrappers import printf
 from random import randint
+from .Base import Base
 
 # randint(0,1024)
 
-class SMBus(object):
+
+class SMBus(Base):
 	@printf
 	def __init__(self, bus=None, force=False):
-		pass
+		Base.__init__(self, self.__class__)
 
 	@printf
 	def write_byte_data(self, i2c_addr, register, value):

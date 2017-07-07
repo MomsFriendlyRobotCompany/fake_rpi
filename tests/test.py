@@ -42,9 +42,10 @@ def test_picamera():
 	bgr.truncate(0)
 	assert True
 
-	def test_serial():
-		s = serial.Serial()
-		# try opening and it should fail
-		s.port  = '/dev/serial'
-		s.open()
-		assert s.isOpen() is True
+
+def test_serial():
+	s = serial.Serial()
+	# try opening and it should fail
+	s.port  = '/dev/serial'
+	s.open()
+	assert s.isOpen() is True

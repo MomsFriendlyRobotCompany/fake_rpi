@@ -1,9 +1,10 @@
 
 from __future__ import division
 from __future__ import print_function
+from .Base import Base
 
 
-class Serial(object):
+class Serial(Base):
 	"""
 	A dummy interface to test with when not hooked up to real hardware.
 	"""
@@ -20,7 +21,8 @@ class Serial(object):
 	name = 'name'
 
 	def __init__(self):
-		pass
+		# super(Base, self).__init__(self.__class__)
+		Base.__init__(self, self.__class__)
 
 	def open(self):
 		if not self.port:
