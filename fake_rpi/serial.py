@@ -47,6 +47,12 @@ class Serial(Base):
 	def flush(self):
 		pass
 
+	def flushInput(self):
+		pass
+
+	def flushOutput(self):
+		pass
+
 	def set_output_flow_control(self, enable=True):
 		pass
 
