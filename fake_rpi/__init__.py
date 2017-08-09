@@ -1,6 +1,6 @@
 from __future__ import print_function
 from . import serial
-from . import smbus
+import fake_rpi.smbus
 from . import RPi
 from .Adafruit import LSM303
 from .wrappers import printf

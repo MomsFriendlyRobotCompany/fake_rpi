@@ -1,6 +1,6 @@
-from .wrappers import printf
+from fake_rpi.wrappers import printf
 from random import randint
-from .Base import Base
+from fake_rpi.Base import Base
 
 # randint(0,1024)
 
