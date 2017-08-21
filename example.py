@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from fake_rpi import RPi
 from fake_rpi import printf
 from fake_rpi import toggle_print
 
@@ -8,15 +7,17 @@ from fake_rpi import toggle_print
 import sys
 import fake_rpi
 
+sys.modules['RPi'] = fake_rpi.RPi
 sys.modules['smbus'] = fake_rpi.smbus
 
 # Then keep the transparent import everywhere in the application and dependencies
+import RPi.GPIO as GPIO
 import smbus
 
 
 toggle_print(True)  # turn on/off printing
 
-pwm = RPi.PWM()
+pwm = GPIO.PWM()
 pwm.start(5)
 
 i2c = smbus.SMBus(1)
