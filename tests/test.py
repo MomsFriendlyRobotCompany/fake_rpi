@@ -1,8 +1,16 @@
 from __future__ import print_function
-from fake_rpi import smbus
 from fake_rpi import picamera
-from fake_rpi import RPi
 from fake_rpi import serial
+
+# Faking
+import sys
+import fake_rpi
+
+sys.modules['RPi'] = fake_rpi.RPi
+sys.modules['smbus'] = fake_rpi.smbus
+
+import RPi.GPIO as GPIO
+import smbus
 
 
 def test_smbus():
@@ -25,7 +33,7 @@ def test_smbus():
 
 
 def test_pwm():
-	pwm = RPi.PWM()
+	pwm = GPIO.PWM()
 	pwm.ChangeDutyCycle(1)
 	pwm.ChangeFrequency(1)
 	assert True, "there really is much to sim here"
