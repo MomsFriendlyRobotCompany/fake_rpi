@@ -1,5 +1,5 @@
 from __future__ import print_function
-from setuptools import setup
+from setuptools import setup, find_packages
 from fake_rpi.version import __version__ as VERSION
 from build_utils import BuildCommand
 from build_utils import PublishCommand
@@ -33,7 +33,7 @@ setup(
 	],
 	license='MIT',
 	keywords=['raspberry', 'pi', 'fake', 'fake_rpi', 'i2c', 'spi', 'gpio', 'serial'],
-	packages=[PACKAGE_NAME],
+	packages=find_packages('.'),
 	install_requires=['build_utils'],
 	cmdclass={
 		'make': BuildCommand,
