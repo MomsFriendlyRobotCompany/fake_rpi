@@ -83,7 +83,7 @@ Then you can keep your usual imports in your application:
 	sm = smbus.SMBus(1) # now use the fake smbus
 	b = sm.read_byte_data(0x21, 0x32)  # read in a byte
 
-Turning on/off fake calls:
+Turning on/off fake calls logging:
 
 .. code-block:: python
 
