@@ -59,22 +59,38 @@ To submit pull requests and do development::
 Usage
 -------
 
-To use as is:
+To fake `RPi.GPIO` or `smbus`, this following code must be executed before your application:
 
 .. code-block:: python
 
-	from fake_rpi import GPIO as io
-	from fake_rpi import smbus
+	# Replace libraries by fake ones
+	import sys
+	import fake_rpi
+
+	sys.modules['RPi'] = fake_rpi.RPi     # Fake RPi (GPIO)
+	sys.modules['smbus'] = fake_rpi.smbus # Fake smbus (I2C)
+
+Then you can keep your usual imports in your application:
+
+.. code-block:: python
+
+	import RPi.GPIO as GPIO
+	import smbus
+
+	GPIO.setmode(io.BCM) # now use the fake GPIO
+	b = GPIO.input(21)
+
+	sm = smbus.SMBus(1) # now use the fake smbus
+	b = sm.read_byte_data(0x21, 0x32)  # read in a byte
+
+Turning on/off fake calls logging:
+
+.. code-block:: python
+
 	from fake_rpi import toggle_print
 
 	# by default it prints everything to std.error
 	toggle_print(False)  # turn on/off printing
-
-	io.setmode(io.BCM)
-	b = io.input(21)
-
-	sm = smbus.SMBus(1)
-	b = sm.read_byte_data(0x21, 0x32)  # read in a byte
 
 But I need ``smbus`` to return a specific byte for unit testing! Ok, then create a child of my ``smbus`` like below
 and modify *only* the methods you need changed:
