@@ -65,7 +65,7 @@ def setmode(a): pass
 def getmode(): return BCM
 
 @printf
-def setup(channel, state, initial=LOW): pass
+def setup(channel, state, initial=LOW, pull_up_down=None): pass
 
 @printf
 def input(a): return randint(0, 1)
