@@ -21,19 +21,36 @@ class PWM(Base):
 	def ChangeFrequency(self, frequency):
 		pass
 
-
+# Values
 LOW = 0
 HIGH = 1
-IN = 1
-OUT = 0
+
+# Modes
 BCM = 11
 BOARD = 10
-PUD_UP = 22
+
+# Pull
+PUD_OFF = 20
 PUD_DOWN = 21
-I2C = 42
-SPI = 41
+PUD_UP = 22
+
+# Edges
 RISING = 31
+FALLING = 32
+BOTH = 33
+
+# Functions
+OUT = 0
+IN = 1
+SERIAL = 40
+SPI = 41
+I2C = 42
+HARD_PWM = 43
 UNKNOWN = -1
+
+# Versioning
+RPI_REVISION = 2
+VERSION = '0.5.6'
 
 def __init__(self):
 	Base.__init__(self, self.__class__)
@@ -58,3 +75,21 @@ def cleanup(a=None): pass
 
 @printf
 def output(channel, state): pass
+
+@printf
+def wait_for_edge(channel, edge): pass
+
+@printf
+def add_event_detect(channel, edge, callback=None, bouncetime=None): pass
+
+@printf
+def add_event_callback(channel, callback=None): pass
+
+@printf
+def remove_event_detect(channel): pass
+
+@printf
+def event_detected(channel): return False
+
+@printf
+def gpio_function(channel): return OUT
