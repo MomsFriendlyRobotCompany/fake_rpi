@@ -34,7 +34,7 @@ setup(
 	license='MIT',
 	keywords=['raspberry', 'pi', 'fake', 'fake_rpi', 'i2c', 'spi', 'gpio', 'serial'],
 	packages=find_packages('.'),
-	install_requires=['build_utils'],
+	install_requires=['build_utils', 'numpy'],
 	cmdclass={
 		'make': BuildCommand,
 		'publish': PublishCommand
