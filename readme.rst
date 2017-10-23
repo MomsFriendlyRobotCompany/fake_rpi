@@ -143,6 +143,7 @@ Change Log
 ------------
 
 ========== ====== =========
+2017-10-23 0.5.3  bug fix with randint
 2017-09-05 0.5.1  flushing out interfaces
 2017-07-07 0.3.0  fixed bugs, print statement, and reduced dups
 2017-04-08 0.1.0  initial python3 setup and support

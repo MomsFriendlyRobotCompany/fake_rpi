@@ -1,5 +1,6 @@
 from fake_rpi.wrappers import printf
 from fake_rpi.Base import Base
+from random import randint
 
 
 class PWM(Base):
