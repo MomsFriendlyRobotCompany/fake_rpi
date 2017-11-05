@@ -15,7 +15,15 @@ class SMBus(Base):
 		pass
 
 	@printf
+	def write_byte(self, i2c_addr, value):
+		pass
+	
+	@printf
 	def read_byte_data(self, i2c_addr, register):
+		return randint(0, 2**8)
+
+	@printf
+	def read_byte(self, i2c_addr):
 		return randint(0, 2**8)
 
 	@printf
