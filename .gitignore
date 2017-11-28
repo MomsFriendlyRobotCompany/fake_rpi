@@ -4,3 +4,4 @@ old
 *.egg-info
 build
 dist
+tmp

@@ -6,6 +6,9 @@ from .Adafruit import LSM303
 from .wrappers import printf
 from .wrappers import toggle_print
 from . import picamera
+from fake_rpi.RPi2 import RPi2
+
+
 from .version import __version__
 
 __author__ = 'Kevin Walchko'

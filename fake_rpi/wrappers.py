@@ -16,7 +16,11 @@ def printf(f):
 	@wraps(f)
 	def wrapped(*args, **kwargs):
 		r = f(*args, **kwargs)
-		c = str(args[0].__class__).split('\'')
+		# print(len(args), kwargs)
+		if len(args):
+			c = str(args[0].__class__).split('\'')
+		else:
+			c = ['', '']
 		if PRINT_ON:
 			if r:
 				print('{}.{}{}: {}'.format(c[1], f.__name__, args[1:], r))
