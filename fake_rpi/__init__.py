@@ -6,6 +6,8 @@ from .Adafruit import LSM303
 from .wrappers import printf
 from .wrappers import toggle_print
 from . import picamera
+
+
 from .version import __version__
 
 __author__ = 'Kevin Walchko'
