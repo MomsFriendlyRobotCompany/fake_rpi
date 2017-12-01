@@ -16,15 +16,16 @@ def printf(f):
 	@wraps(f)
 	def wrapped(*args, **kwargs):
 		r = f(*args, **kwargs)
-		# print(len(args), kwargs)
+
 		if len(args):
-			c = str(args[0].__class__).split('\'')
+			c = str(args[0].__class__).split('\'')[1]  # grab self from the class method
 		else:
-			c = ['', '']
+			c = ''  # no class
+
 		if PRINT_ON:
 			if r:
-				print('{}.{}{}: {}'.format(c[1], f.__name__, args[1:], r))
+				print('{}.{}{}: {}'.format(c, f.__name__, args[1:], r))
 			else:
-				print('{}.{}{}'.format(c[1], f.__name__, args[1:]))
+				print('{}.{}{}'.format(c, f.__name__, args[1:]))
 		return r
 	return wrapped
