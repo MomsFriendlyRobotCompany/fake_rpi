@@ -28,7 +28,7 @@ class SMBus(Base):
 
 	@printf
 	def read_word_data(self, i2c_addr, register):
-		return [randint(0, 2**8-1)]*2
+		return randint(0, 2**16-1)
 
 	@printf
 	def write_word_data(self, i2c_addr, register, value):
