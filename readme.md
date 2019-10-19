@@ -135,7 +135,7 @@ Change Log
 
 |  Date      | Ver.  | Notes                                         |
 | ---------- | ----- | --------------------------------------------- |
-| 2019-10-19 | 0.6.2 | fix from scivision and some clean up          |
+| 2019-10-19 | 0.6.2 | fixes from scivision and Rotzbua              |
 | 2019-03-29 | 0.6.1 | bug fix with randint range                    |
 | 2017-11-30 | 0.6.0 | bug fix with printing                         |
 | 2017-10-23 | 0.5.3 | bug fix with randint                          |

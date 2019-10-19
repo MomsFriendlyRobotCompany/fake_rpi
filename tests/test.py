@@ -25,14 +25,17 @@ def test_smbus():
         assert 0 <= ret <= 2**8
 
         b = i2c.read_word_data(1, 2)
-        assert len(b) == 2
-        for n in b:
-            assert 0 <= ret <= 2**8
+        # assert len(b) == 2
+        # for n in b:
+        #     assert 0 <= ret <= 2**8
+        assert isinstance(b, int)
+        assert 0 <= b <= 2**16
 
         d = i2c.read_i2c_block_data(1, 2, 6)
         assert len(d) == 6
         for n in d:
-            assert 0 <= ret <= 2**8
+            # assert 0 <= ret <= 2**8
+            assert 0 <= n <= 2**8
 
 
 def test_pwm():

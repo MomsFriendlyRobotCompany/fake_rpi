@@ -10,4 +10,4 @@ from . import picamera
 
 __author__ = 'Kevin Walchko'
 __license__ = 'MIT'
-__version__ = '0.6.1'
+__version__ = '0.6.2'
