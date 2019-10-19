@@ -4,11 +4,8 @@ Fake Raspberry Pi
 =================
 
 [![Latest Version](https://img.shields.io/pypi/v/fake_rpi.svg)](https://pypi.python.org/pypi/fake_rpi/)
-
 [![License](https://img.shields.io/pypi/l/fake_rpi.svg)](https://pypi.python.org/pypi/fake_rpi/)
-
 [![Travis-ci](https://travis-ci.org/MomsFriendlyRobotCompany/fake_rpi.svg?branch=master)](https://travis-ci.org/MomsFriendlyRobotCompany/fake_rpi)
-
 [![Python Versions](https://img.shields.io/pypi/pyversions/fake_rpi.svg)](https://pypi.python.org/pypi/fake_rpi/)
 
 **Why??**
