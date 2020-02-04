@@ -3,10 +3,10 @@
 Fake Raspberry Pi
 =================
 
-[![Latest Version](https://img.shields.io/pypi/v/fake_rpi.svg)](https://pypi.python.org/pypi/fake_rpi/)
-[![License](https://img.shields.io/pypi/l/fake_rpi.svg)](https://pypi.python.org/pypi/fake_rpi/)
-[![Travis-ci](https://travis-ci.org/MomsFriendlyRobotCompany/fake_rpi.svg?branch=master)](https://travis-ci.org/MomsFriendlyRobotCompany/fake_rpi)
-[![Python Versions](https://img.shields.io/pypi/pyversions/fake_rpi.svg)](https://pypi.python.org/pypi/fake_rpi/)
+[![Actions Status](https://github.com/MultipedRobotics/dh/workflows/CheckPackage/badge.svg)](https://github.com/MultipedRobotics/pyservos/actions)
+![GitHub](https://img.shields.io/github/license/multipedrobotics/pyservos)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyservos)
+![PyPI](https://img.shields.io/pypi/v/pyservos)
 
 **Why??**
 
@@ -29,8 +29,7 @@ also welcome to submit pull requests for things I haven\'t added yet.
 | smbus    | i2c                   |
 | serial   | not done yet          |
 
-Install
--------
+## Install
 
 The preferred way to install this is:
 
@@ -38,19 +37,17 @@ The preferred way to install this is:
 pip install fake_rpi
 ```
 
-Development
------------
+## Development
 
 To submit pull requests and do development:
 
 ```
 git clone https://github.com/MomsFriendlyRobotCompany/fake_rpi.git
 cd fake_rpi
-pip install -e .
+poetry install
 ```
 
-Usage
------
+## Usage
 
 To fake [RPi.GPIO]{.title-ref} or [smbus]{.title-ref}, this following
 code must be executed before your application:
@@ -130,11 +127,11 @@ __main__.MyBus.read_byte_data(1, 2): 72
 __main__.MyBus.read_i2c_block_data(1, 2, 3): [90, 90, 90]
 ```
 
-Change Log
-----------
+# Change Log
 
 |  Date      | Ver.  | Notes                                         |
 | ---------- | ----- | --------------------------------------------- |
+| 2020-02-03 | 0.6.3 | moved to toml and github workflows            |
 | 2019-10-19 | 0.6.2 | fixes from scivision and Rotzbua              |
 | 2019-03-29 | 0.6.1 | bug fix with randint range                    |
 | 2017-11-30 | 0.6.0 | bug fix with printing                         |

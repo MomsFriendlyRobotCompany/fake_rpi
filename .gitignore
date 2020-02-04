@@ -5,3 +5,6 @@ old
 build
 dist
 tmp
+._*
+.mypy_cache
+.pytest_cache
