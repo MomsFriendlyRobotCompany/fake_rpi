@@ -1,3 +1,8 @@
+###############################################
+# The MIT License (MIT)
+# Copyright (c) 2017 Kevin Walchko
+# see LICENSE for full details
+##############################################
 import numpy as np  # type: ignore
 # import platform
 from .wrappers import printf

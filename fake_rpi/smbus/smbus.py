@@ -1,3 +1,8 @@
+###############################################
+# The MIT License (MIT)
+# Copyright (c) 2017 Kevin Walchko
+# see LICENSE for full details
+##############################################
 from fake_rpi.wrappers import printf
 from random import randint
 from fake_rpi.Base import Base

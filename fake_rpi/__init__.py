@@ -1,3 +1,8 @@
+###############################################
+# The MIT License (MIT)
+# Copyright (c) 2017 Kevin Walchko
+# see LICENSE for full details
+##############################################
 # from __future__ import print_function
 from . import serial
 import fake_rpi.smbus

@@ -3,10 +3,10 @@
 Fake Raspberry Pi
 =================
 
-[![Actions Status](https://github.com/MultipedRobotics/dh/workflows/CheckPackage/badge.svg)](https://github.com/MultipedRobotics/pyservos/actions)
-![GitHub](https://img.shields.io/github/license/multipedrobotics/pyservos)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyservos)
-![PyPI](https://img.shields.io/pypi/v/pyservos)
+[![Actions Status](https://github.com/MomsFriendlyRobotCompany/fake_rpi/workflows/CheckPackage/badge.svg)](https://github.com/MomsFriendlyRobotCompany/fake_rpi/actions)
+![GitHub](https://img.shields.io/github/license/MomsFriendlyRobotCompany/fake_rpi)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fake_rpi)
+![PyPI](https://img.shields.io/pypi/v/fake_rpi)
 
 **Why??**
 
@@ -14,7 +14,7 @@ I do a lot of development on my Powerbook and I got tired of constantly
 creating a fake interface for dev on my laptop and testing on Travis.ci.
 
 -   2017 Apr 2: **Beta Quality**
--   2017 Apr 8: **Initial** python3 support \... this is a pain
+-   2017 Apr 8: **Initial** python3 support
 
 So, does this simulate everything on a Raspberry Pi? **No!** Right now
 it simulates what I use and need. Over time, more will be added. You are

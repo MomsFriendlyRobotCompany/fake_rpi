@@ -27,17 +27,17 @@ i2c.close()
 
 
 class MyBus(smbus.SMBus):
-	"""
-	Here I want to over ride how this behaves for testing
-	"""
-	@printf
-	def __init__(self):
-		pass
+    """
+    Here I want to over ride how this behaves for testing
+    """
+    @printf
+    def __init__(self):
+        pass
 
-	@printf
-	def read_byte_data(self, a, b):
-		ret = 0x71 if a == 0x68 else 0x48
-		return ret
+    @printf
+    def read_byte_data(self, a, b):
+        ret = 0x71 if a == 0x68 else 0x48
+        return ret
 
 
 i2c = MyBus()
