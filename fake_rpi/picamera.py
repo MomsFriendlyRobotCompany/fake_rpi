@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np  # type: ignore
 # import platform
 from .wrappers import printf
 from .Base import Base

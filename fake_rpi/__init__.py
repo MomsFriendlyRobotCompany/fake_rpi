@@ -1,4 +1,4 @@
-from __future__ import print_function
+# from __future__ import print_function
 from . import serial
 import fake_rpi.smbus
 import fake_rpi.RPi
