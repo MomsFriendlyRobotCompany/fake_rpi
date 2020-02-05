@@ -1,7 +1,6 @@
 ![image](https://raw.githubusercontent.com/MomsFriendlyRobotCompany/fake_rpi/master/pics/pi-python.jpg)
 
-Fake Raspberry Pi
-=================
+# Fake Raspberry Pi
 
 [![Actions Status](https://github.com/MomsFriendlyRobotCompany/fake_rpi/workflows/CheckPackage/badge.svg)](https://github.com/MomsFriendlyRobotCompany/fake_rpi/actions)
 ![GitHub](https://img.shields.io/github/license/MomsFriendlyRobotCompany/fake_rpi)
@@ -49,10 +48,10 @@ poetry install
 
 ## Usage
 
-To fake [RPi.GPIO]{.title-ref} or [smbus]{.title-ref}, this following
+To fake RPi.GPIO or smbus, this following
 code must be executed before your application:
 
-``` {.python}
+```python
 # Replace libraries by fake ones
 import sys
 import fake_rpi
@@ -63,7 +62,7 @@ sys.modules['smbus'] = fake_rpi.smbus # Fake smbus (I2C)
 
 Then you can keep your usual imports in your application:
 
-``` {.python}
+```python
 import RPi.GPIO as GPIO
 import smbus
 
@@ -76,7 +75,7 @@ b = sm.read_byte_data(0x21, 0x32)  # read in a byte
 
 Turning on/off fake calls logging:
 
-``` {.python}
+```python
 from fake_rpi import toggle_print
 
 # by default it prints everything to std.error
@@ -87,7 +86,7 @@ But I need `smbus` to return a specific byte for unit testing! Ok, then
 create a child of my `smbus` like below and modify *only* the methods
 you need changed:
 
-``` {.python}
+```python
 from fake_rpi import smbus
 from fake_rpi import printf
 
@@ -148,7 +147,7 @@ __main__.MyBus.read_i2c_block_data(1, 2, 3): [90, 90, 90]
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
-\"Software\"), to deal in the Software without restriction, including
+"Software"), to deal in the Software without restriction, including
 without limitation the rights to use, copy, modify, merge, publish,
 distribute, sublicense, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to
@@ -157,7 +156,7 @@ the following conditions:
 The above copyright notice and this permission notice shall be included
 in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
