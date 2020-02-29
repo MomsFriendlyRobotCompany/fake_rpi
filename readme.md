@@ -10,7 +10,7 @@
 **Why??**
 
 I do a lot of development on my Powerbook and I got tired of constantly
-creating a fake interface for dev on my laptop and testing on Travis.ci.
+creating a fake interface for dev on my laptop and testing on Travis.ci or github workflows.
 
 -   2017 Apr 2: **Beta Quality**
 -   2017 Apr 8: **Initial** python3 support
@@ -22,6 +22,7 @@ also welcome to submit pull requests for things I haven\'t added yet.
 |          |                       |
 | -------- | --------------------- |
 | Adafruit | LSM303(accelerometer) |
+| nxp_imu  | adafruit accelerometer|
 | GPIO     | gpio pins             |
 | picamera | camera                |
 | RPi      | PWM                   |
@@ -38,13 +39,15 @@ pip install fake_rpi
 
 ## Development
 
-To submit pull requests and do development:
+To submit pull requests for new sensors or fixes, just do:
 
 ```
 git clone https://github.com/MomsFriendlyRobotCompany/fake_rpi.git
 cd fake_rpi
 poetry install
 ```
+
+Then do a pull request.
 
 ## Usage
 
