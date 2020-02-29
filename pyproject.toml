@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fake_rpi"
-version = "0.6.3"
+version = "0.6.4"
 description = "A bunch of fake interfaces for development when not using the RPi or unit testing"
 authors = ["walchko <walchko@users.noreply.github.com>"]
 readme = "readme.md"
@@ -29,8 +29,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.6"
 numpy = "*"
-# pyserial = "^3.4"
-# colorama = "*"
+importlib-metadata = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
