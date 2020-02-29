@@ -6,6 +6,7 @@
 ![GitHub](https://img.shields.io/github/license/MomsFriendlyRobotCompany/fake_rpi)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fake_rpi)
 ![PyPI](https://img.shields.io/pypi/v/fake_rpi)
+[![Downloads](https://img.shields.io/pypi/dm/fake_rpi.svg)](https://img.shields.io/pypi/dm/fake_rpi.svg)
 
 **Why??**
 
