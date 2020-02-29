@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fake_rpi"
-version = "0.6.4"
+version = "0.6.3"
 description = "A bunch of fake interfaces for development when not using the RPi or unit testing"
 authors = ["walchko <walchko@users.noreply.github.com>"]
 readme = "readme.md"
@@ -24,12 +24,12 @@ classifiers = [
 
 # [tool.poetry.scripts]
 # # script_name = 'myscript:main'
-# servoAX12 = "pyservos.bin.servoAX12:main"
 
 [tool.poetry.dependencies]
 python = ">=3.6"
 numpy = "*"
-importlib-metadata = "*"
+# pyserial = "^3.4"
+# colorama = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
