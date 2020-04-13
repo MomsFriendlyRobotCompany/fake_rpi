@@ -64,6 +64,7 @@ class _GPIO(Base):
 
     def __init__(self):
         Base.__init__(self, self.__class__)
+        self._inputs = [None] * 40  # We have 40 input pins
 
     @printf
     def setwarnings(self, a): pass
@@ -78,7 +79,14 @@ class _GPIO(Base):
     def setup(self, channel, state, initial=0, pull_up_down=None): pass
 
     @printf
-    def input(self, a): return randint(0, 1)
+    def input(self, channel):
+        if self._inputs[channel] is not None:
+            return self._inputs[channel]
+        return randint(0, 1)
+
+    @printf
+    def set_input(self, channel, value):
+        self._inputs[channel] = value
 
     @printf
     def cleanup(self, a=None): pass
