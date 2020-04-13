@@ -29,7 +29,7 @@ class PiCamera(Base):
     """Fake class"""
     resolution = (0, 0)
 
-    def __init__(self):
+    def __init__(self, resolution=None):
         # empty constructor
         # print('WARNING: Fake_RPi PiCamera on {}'.format(platform.system().lower()))
         Base.__init__(self, self.__class__)
@@ -46,7 +46,7 @@ class PiCamera(Base):
         pass
 
     @printf
-    def capture(self, image, format, use_video_port):
+    def capture(self, output, format=None, use_video_port=False, resize=None, splitter_port=0, **options):
         # this does nothing
         pass
 
