@@ -135,6 +135,7 @@ __main__.MyBus.read_i2c_block_data(1, 2, 3): [90, 90, 90]
 
 |  Date      | Ver.  | Notes                                         |
 | ---------- | ----- | --------------------------------------------- |
+| 2020-04-03 | 0.7.0 | additions to gpio and camera                  |
 | 2020-02-03 | 0.6.3 | moved to toml and github workflows            |
 | 2019-10-19 | 0.6.2 | fixes from scivision and Rotzbua              |
 | 2019-03-29 | 0.6.1 | bug fix with randint range                    |

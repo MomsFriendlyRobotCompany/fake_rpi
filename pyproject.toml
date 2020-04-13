@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fake_rpi"
-version = "0.6.3"
+version = "0.7.0"
 description = "A bunch of fake interfaces for development when not using the RPi or unit testing"
 authors = ["walchko <walchko@users.noreply.github.com>"]
 readme = "readme.md"
