@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fake_rpi"
-version = "0.7.0"
+version = "0.7.1"
 description = "A bunch of fake interfaces for development when not using the RPi or unit testing"
 authors = ["walchko <walchko@users.noreply.github.com>"]
 readme = "readme.md"
@@ -22,21 +22,13 @@ classifiers = [
     'Topic :: Software Development :: Libraries :: Application Frameworks'
 ]
 
-# [tool.poetry.scripts]
-# # script_name = 'myscript:main'
-
 [tool.poetry.dependencies]
 python = ">=3.6"
 numpy = "*"
-# pyserial = "^3.4"
-# colorama = "*"
+importlib-metadata = {version="*", python="<3.8"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
-# mypy = "*"
-
-# [mypy-pi_servo_serial]
-# ignore_missing_imports = True
 
 [build-system]
 requires = ["poetry>=0.12"]
