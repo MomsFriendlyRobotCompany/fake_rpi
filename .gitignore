@@ -8,3 +8,4 @@ tmp
 ._*
 .mypy_cache
 .pytest_cache
+*.lock
