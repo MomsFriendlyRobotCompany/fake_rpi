@@ -8,9 +8,11 @@ import sys
 import fake_rpi
 
 sys.modules['RPi'] = fake_rpi.RPi
+sys.modules['RPi.GPIO'] = fake_rpi.RPi.GPIO
 sys.modules['smbus'] = fake_rpi.smbus
 
 # Then keep the transparent import everywhere in the application and dependencies
+import RPi
 import RPi.GPIO as GPIO
 import smbus
 
@@ -43,3 +45,16 @@ class MyBus(smbus.SMBus):
 i2c = MyBus()
 i2c.read_byte_data(1, 2)
 i2c.read_i2c_block_data(1, 2, 3)
+
+
+class MyGPIO(RPi._GPIO):
+    def setup(self, channel, state, initial=0, pull_up_down=None):
+        self._inputs[channel] = state
+
+
+GPIO = MyGPIO()
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(21, 1)  # fake GPIO input is set to 1
+GPIO.setup(22, 0)  # fake GPIO input is set to 0
+b = GPIO.input(21)
+b = GPIO.input(22)

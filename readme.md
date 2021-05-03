@@ -109,6 +109,25 @@ sm = MyBus()
 b = sm.read_byte_data(0x21, 0x32)  # read in a byte
 ```
 
+What if I need take control of `GPIO` input so that it returns
+non-random bit. Ok, then create a child of my `_GPIO` like
+below and modify the `setup` method:
+
+```python
+import RPi
+
+class MyGPIO(RPi._GPIO):
+    def setup(self, channel, state, initial=0, pull_up_down=None):
+        self._inputs[channel] = state
+
+GPIO = MyGPIO()
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(21, 1)  # fake GPIO input is set to 1
+GPIO.setup(22, 1)  # fake GPIO input is set to 0
+b = GPIO.input(21)
+b = GPIO.input(22)
+```
+
 ### Printing On or Off
 
 Here is the output from `example.py` in the `git` repo when the printing
