@@ -80,7 +80,7 @@ class _GPIO(Base):
 
     @printf
     def input(self, channel):
-        if self._inputs[channel] is not None:
+        if channel in self._inputs and self._inputs[channel] is not None:
             return self._inputs[channel]
         return randint(0, 1)
 
